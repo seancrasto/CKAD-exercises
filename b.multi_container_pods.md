@@ -134,7 +134,7 @@ kubectl apply -f pod-init.yaml
 # Get IP
 kubectl get po -o wide
 
-# Execute wget
+# Execute wget. Refer to [this](https://github.com/dgkanatsios/CKAD-exercises/blob/main/a.core_concepts.md#get-nginx-pods-ip-created-in-previous-step-use-a-temp-busybox-image-to-wget-its-) solution for alternative ways that this can be done
 kubectl run box-test --image=busybox --restart=Never -it --rm -- /bin/sh -c "wget -O- IP"
 
 # you can do some cleanup
